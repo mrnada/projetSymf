@@ -1,0 +1,41 @@
+{% extends'base.html.twig'%}
+
+{% block title %} {{parent()}} titre hello {% endblock %}
+
+{% block body %}
+
+<h1>{{titre}}</h1>
+{% if test %}
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima deleniti iste optio aliquid neque, nemo corrupti, aspernatur hic sint et eaque unde, consectetur iusto ex ab cupiditate mollitia beatae facilis.</p>
+
+<p>Inventore perspiciatis accusantium hic temporibus eum et soluta cumque possimus explicabo, ad ea expedita corporis odit necessitatibus magnam non eos reiciendis placeat dicta incidunt in quibusdam. Voluptates deserunt facere sint?</p>
+
+{% else %}
+<b>Schön ist das Leben </b>
+
+{% endif %}
+
+
+
+<h2>-Exemple avec l'age pour le disco-</h2>
+
+{% if exemple > 18 %}
+<b>Tu as le droit de sortir</b>
+
+{% else %}
+<b>Tu restes avec maman!</b>
+
+{% endif %}
+
+
+
+<h3>-Exemple avec les voitures. Affichage d'un tableau-</h3>
+<!--<img src="images/citroen-c3.jpg" alt="">-->
+<img src="{{ asset('images/citroen-c3.jpg') }}" alt="">
+
+{% for voiture in voitures %}
+    {{voiture | upper}}
+{% endfor %}
+
+{% endblock %}

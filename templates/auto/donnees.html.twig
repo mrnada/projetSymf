@@ -1,0 +1,31 @@
+{% extends'base.html.twig' %}
+
+{% block body %}
+
+<!--{{ dump(voitures) }}-->
+
+<h1>Donnees</h1>
+<table class="table table-stripped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Marque</th>
+            <th>Modele</th>
+            <th>Pays</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+<tbody>
+    {% for voiture in voitures %}
+    <tr>
+        <!--{{ dump(voiture.marque) }}-->
+        <td>{{voiture.id}}</td>
+        <td>{{voiture.marque}}</td>
+        <td>{{voiture.modele}}</td>
+        <td>{{voiture.pays}}</td>
+        <td><img src="{{voiture.image}}" alt=""></td>
+    </tr>
+    {% endfor %}
+</tbody>
+
+{% endblock %}
