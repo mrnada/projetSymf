@@ -21,10 +21,10 @@
 <h2>-Exemple avec l'age pour le disco-</h2>
 
 {% if exemple > 18 %}
-<b>Tu as le droit de sortir</b>
+<b>Tu as le droit de sortir</br>
 
 {% else %}
-<b>Tu restes avec maman!</b>
+<b>Tu restes avec maman!</br>
 
 {% endif %}
 
@@ -32,7 +32,7 @@
 
 <h3>-Exemple avec les voitures. Affichage d'un tableau-</h3>
 <!--<img src="images/citroen-c3.jpg" alt="">-->
-<img src="{{ asset('images/citroen-c3.jpg') }}" alt="">
+<img src="{{ asset('images/citroen-c3.jpg') }}" alt=""><br>
 
 {% for voiture in voitures %}
     {{voiture | upper}}
