@@ -32,7 +32,7 @@
 
 <h3>-Exemple avec les voitures. Affichage d'un tableau-</h3>
 <!--<img src="images/citroen-c3.jpg" alt="">-->
-<img src="{{ asset('images/citroen-c3.jpg') }}" alt=""><br>
+<img src="{{ asset('images/citroen-c3.jpg') }}" style="max-width: 300px" alt=""><br>
 
 {% for voiture in voitures %}
     {{voiture | upper}}

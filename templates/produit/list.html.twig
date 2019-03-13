@@ -1,0 +1,19 @@
+{% extends'base.html.twig' %}
+
+{% block body %}
+{% for produit in produits %}
+
+<br>
+<div class="row">
+    <div class="col-md-6"><img src="/{{produit.image}}" style="max-width: 100px" alt="" > </div><!--le slash doit etre exterieur de {, sinon l'image s'affiche pas-->
+    <div class="col-md-6">
+        <p>Nom: {{produit.nom}}</p>
+        <p>Marque: {{produit.marque}}</p>
+        <p>Prix: {{produit.prix}} €</p>
+    </div>
+</div>
+<a href="{{path('produit_show',{'id':produit.id})}}" class="btn btn-secondary">Lire plus!</a>
+<hr>
+
+{% endfor %}
+{% endblock %}

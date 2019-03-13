@@ -36,6 +36,11 @@ class Produit
      */
     private $description;
 
+    /**
+     * @ORM\Column(type="string", length=50)
+     */
+    private $marque;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -85,6 +90,18 @@ class Produit
     public function setDescription(string $description): self
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function getMarque(): ?string
+    {
+        return $this->marque;
+    }
+
+    public function setMarque(string $marque): self
+    {
+        $this->marque = $marque;
 
         return $this;
     }
